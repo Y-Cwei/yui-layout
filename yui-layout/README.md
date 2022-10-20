@@ -1,21 +1,23 @@
 ## @ycwei/yui-layout
-#### @ycwei/yui-layout是一套基于vue开发的UI库，能直接简化你的布局开发
+#### yui-layout是一套基于vue开发的UI组件库  
+使用 yui-layout ，能够使你不再聚焦于css，而向编写js配置项，从而实现任意场景布局，特别是在大屏自适应兼容开发场景中。  
+
 如果你正在开发一个**大屏**项目，而你对页面**自适应布局**又没有什么即时有效的解决方法，或许yui-layout就能完美的帮你解决你当前遇到的困难，并且这个布局过程，或许只需要几分钟时间。 
 
-当然，普通的流式布局也能使用yui-layout，但似乎又显的没那么必要。
+当然，普通的流式布局也能使用yui-layout，但似乎又显的没那么必要，我也强烈建议你不要使用它。
 
-#### 安装步骤
-##### 步骤一、安装
+#### 一、安装步骤
+##### 1、安装
 ```
 npm install @ycwei/yui-layout
 or
 yarn add @ycwei/yui-layout
 ```
-##### 步骤二、样式引用
+##### 2、样式引用
 ```
 import '@ycwei/yui-layout/yui-layout.css'
 ```
-##### 步骤三、使用
+##### 3、使用
 ```
 import Vue from 'vue'
 import YuiLayout from '@ycwei/yui-layout'
@@ -24,12 +26,12 @@ import '@ycwei/yui-layout/yui-layout.css'
 Vue.use(YuiLayout)
 ```
 
-#### 应用步骤
-##### 步骤一、使用布局组件
+#### 二、应用步骤
+##### 1、使用布局组件
 ```
 <yui-layout :layouts="layouts" />
 ```
-##### 步骤二、配置布局选项
+##### 2、配置布局选项
 ```
 import HelloWorld from './components/HelloWorld.vue'
 
@@ -58,7 +60,24 @@ export default {
 }
 ```
 
-#### demo案例
+#### 三、API文档
+##### option布局配置
+参数|说明|类型|默认值|可选值|必填
+--|--|--|--|--|--
+name|名称|String|-|-|true
+widthRange|宽度范围|Array(2)|-|-|false
+heightRange|高度范围|Array(2)|-|-|false
+components|组件列表|Array|-|-|true
+style|CSS对象|Object|-|-|false
+
+##### component组件配置
+参数|说明|类型|默认值|可选值|必填
+--|--|--|--|--|--
+name|名称，组件唯一标识，会赋值给ref|String|-|-|true
+render|组件模板|template|-|-|true
+style|CSS对象 ps:自适应布局时，需要将相关样式参数设置成百分比，单位为像素时为某个分辨率下的解决方案|Object|-|-|true
+
+#### 四、demo案例
 ##### 1.初始化vue项目
 ```
 vue create yui-layout-test

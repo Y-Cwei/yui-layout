@@ -6,7 +6,9 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "package": "vue-cli-service build --target lib ./src/packages/index.js --name yui-layout --dest yui-layout"
+    "package": "vue-cli-service build --target lib ./src/packages/index.js --name yui-layout --dest yui-layout",
+    "release": "release-it",
+    "commit": "git-cz"
   },
   "dependencies": {
     "@ycwei/yui-layout": "^1.0.0",
@@ -16,6 +18,7 @@
   "devDependencies": {
     "@babel/core": "^7.12.16",
     "@babel/eslint-parser": "^7.12.16",
+    "@release-it/conventional-changelog": "^5.1.1",
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-eslint": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
@@ -25,6 +28,8 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-vue": "^8.0.3",
+    "git-cz": "^4.9.0",
+    "release-it": "^15.10.1",
     "vue-template-compiler": "^2.6.14"
   }
 }
